@@ -1,0 +1,13 @@
+name: "Test ARC runners"
+
+on:
+  workflow_dispatch:
+
+jobs:
+  main:
+    runs-on: local-minikube-runners
+    steps:
+      - run: whoami
+      - run: pwd
+      - run: ls -l
+      - run: echo $PATH
